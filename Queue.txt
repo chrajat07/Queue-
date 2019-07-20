@@ -1,22 +1,22 @@
 class MyQue 
 {
-	private object obj[];
+	private Object obj[];
 	private int cap;
 	private int rear,front;
 	
 	public MyQue()
 	{
 		cap=10;
-		obj=new object[cap];
+		obj=new Object[cap];
 		rear=front=-1;
 	}
 	public MyQue(int cap)
 	{
 		this.cap=cap;
-		obj=new object [cap];
+		obj=new Object [cap];
 		front=rear=-1;
 	}
-	public void enQue(object ele)
+	public void enQue(Object ele)
 	{
 		if(rear==cap-1)
 		{
@@ -37,13 +37,13 @@ class MyQue
 		}
 		return rear-front+1;
 	}
-	public object deQue() 
+	public Object deQue() 
 	{
 		if(front==-1)
 		{
 			return "queue is empty";
 		}
-		object ele = obj[front++];
+		Object ele = obj[front++];
 		if(front>rear)
 		{
 			front=rear-1;
